@@ -20,19 +20,19 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
 
 	@Override
 	protected UserCredentials getUserCredentials() {
-		return new UserCredentials("hguser", "hguser1!");
+		return new UserCredentials("nerd", "nerd1!");
 	}
 	
 	@Override
 	protected String getDatabaseName() {
-		return "hogudb";
+		return "hogu-prototype";
 	}
 
 
 	@Override
 	public Mongo mongo() throws Exception {
 		Mongo mongo = new MongoClient();
-		return new MongoClient("ds033449.mongolab.com");
+		return new MongoClient("ds033669.mongolab.com", 33669);
 	}
 
 }
