@@ -8,6 +8,7 @@ import net.hg.server.ar.Person;
 
 import net.hg.server.service.PersonalService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,7 +39,7 @@ public class PersonController {
 	 }
 
     @RequestMapping("/person/find/{name}")
-    public @ResponseBody Person findByName(@RequestBody String name) {
+    public @ResponseBody Person findByName(@PathVariable String name) {
         Person person = personalService.findByName(name);
         return person;
     }
