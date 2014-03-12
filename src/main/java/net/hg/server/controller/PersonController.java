@@ -21,7 +21,8 @@ public class PersonController {
 		 List<Person> persons = new ArrayList<Person>();
 		 
 		 persons.add(new Person(idGen.incrementAndGet(),"MyungKyo",32));
-		 persons.add(new Person(idGen.incrementAndGet(),"JoonHyuk",29));
+         persons.add(new Person(idGen.incrementAndGet(),"June",31));
+		 persons.add(new Person(idGen.incrementAndGet(),"JoonHyeok",29));
 		 persons.add(new Person(idGen.incrementAndGet(),"YoungHoo",30));
 		 
 	  	return persons;
