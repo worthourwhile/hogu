@@ -26,7 +26,7 @@
     </dependencies>
 
     <properties>
-        <start-class>hello.Application</start-class>
+        <start-class>net.hg.server.ApplicationMain</start-class>
     </properties>
 
     <build>
