@@ -31,7 +31,6 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
 
 	@Override
 	public Mongo mongo() throws Exception {
-		Mongo mongo = new MongoClient();
 		return new MongoClient("ds033669.mongolab.com", 33669);
 	}
 
