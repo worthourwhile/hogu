@@ -1,4 +1,4 @@
-package net.hg.server.db;
+package net.hg.server.config;
 
 import net.hg.server.ar.Person;
 
