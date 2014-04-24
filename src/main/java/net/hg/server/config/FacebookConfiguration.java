@@ -1,7 +1,6 @@
 package net.hg.server.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.social.UserIdSource;
 import org.springframework.social.config.annotation.EnableInMemoryConnectionRepository;
 import org.springframework.social.connect.ConnectionFactoryLocator;

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class PersonController {
 
-	private AtomicLong idGen = new AtomicLong();
+//	private AtomicLong idGen = new AtomicLong();
 
 	@Resource
 	private PersonalService personalService;
@@ -26,12 +26,6 @@ public class PersonController {
 	public @ResponseBody List<Person> testJson() {
 
 		List<Person> people = new ArrayList<Person>();
-
-		people.add(new Person(idGen.incrementAndGet(), "MyungKyo", 32));
-		people.add(new Person(idGen.incrementAndGet(), "June", 31));
-		people.add(new Person(idGen.incrementAndGet(), "JoonHyeok", 29));
-		people.add(new Person(idGen.incrementAndGet(), "YoungHoo", 30));
-
 		personalService.register(people);
 
 		return people;
