@@ -7,13 +7,50 @@
   <h3 class="text-muted">hogu</h3>
 </div>
 
-<div class="jumbotron">
+<div ng-controller="PayCtrl">
 <!--   <h1>'Allo, 'Allo!</h1> -->
-  <p class="lead">
-    <img src="images/yeoman.png" alt="people"><input type="text" id="numOfPeople" /><br/>
-    <img src="images/yeoman.png" alt="amount"><input type="text" id="amount" />
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#hello">Calculate!</a></p>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+    <tr ng-repeat="item in manList">
+      <td>{{item.name}}</td>
+      <td>{{item.pay}}</td>
+    </tr>
+    <tr>
+      <td>Summary</td>
+      <td>{{totalMoney}}</td>
+    </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-7">
+   <table class="table">
+    <tr ng-repeat="man in manList">
+    <td>{{man.name}}</td>
+      <td ng-repeat="payCheck in man.pays track by $index">
+        <input type="checkbox" ng-model="payCheck.attend" ng-change="calcAll()">
+      </td>
+    </tr>
+    </table>
+    <div class='well'>
+      <label>Name</label>
+        <input type="name" ng-model="newName">
+        <button class="btn btn-primary" ng-click="addMan(newName)">Add</button>
+    </div>
+  </div>
+
+  <div class='col-md-5 well'>
+    <table class="table">
+      <tr ng-repeat="pay in payList track by $index">
+        <td>{{$index+1}}차</td>
+        <td>{{pay}}</td>
+      </tr>
+    </table>
+    <label>Money</label>
+    <input type="number" ng-model="newMoney">
+    <button class="btn btn-primary" ng-click="addPay(newMoney)">Add</button>
+  </div>
 </div>
 <div class="row marketing" >
 	<a class="btn btn-lg btn-success" ng-href="#login">Get FB Friends List</a>
